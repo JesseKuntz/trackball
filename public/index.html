@@ -1,0 +1,57 @@
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Virtual Trackball</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div id="mainWindow">
+    <h3 class="titleBar">Virtual Trackball object viewer</h3>
+
+    <div id="controls">
+      <div id="objectdiv">
+        <select id="object1">
+	  <option value="objects/cube.json">Cube</option>
+    <option value="objects/tetra.json">Tetrahedron</option>
+	  <option value="objects/teapot.json">Teapot</option>
+	  <option value="objects/servo.json">Servo</option>
+	  <option value="objects/pineapple.json">Pineapple</option>
+	  <option value="objects/cow.json">Cow</option>
+        </select>
+      </div>
+
+      <div id="sliderdiv">
+        <p class="option"><input type="checkbox" id="strokeCheckbox" checked="checked"/>Stroke</p>
+        <p class="option"><input type="checkbox" id="fillCheckbox"/>Fill</p>
+        <p class="option"><input type="checkbox" id="cullCheckbox"/>Cull Back</p>
+        <p class="option"><input type="checkbox" id="cullFrontCheckbox"/>Cull Front</p>
+        <p class="option"><input type="checkbox" id="sortCheckbox"/>HSR</p>
+        <p class="option"><input type="checkbox" id="lightCheckbox"/>Light</p>
+        <p class="option"><input type="checkbox" id="perspectiveCheckbox"/>Perspective</p>
+        <p class="option"><input type="checkbox" id="debugCheckbox" checked="checked"/>Debug</p>
+        <p class="option"><input type="checkbox" id="logCheckbox"/>Log mouse</p>
+        <input id="zoomSlider" type="range" min="10" max="200" value="100" />
+	<p id="zoompar">Zoom <span id="zoom">1.00</span></p>
+        <input id="perspectiveSlider" type="range" min="1" max="100" value="40" />
+	<p id="perspectivepar">Persp. dist. <span id="perspective">6.00</span></p>
+	<input type="button" id="resetButton" value="Reset">
+      </div>
+    </div>
+
+    <canvas id="canvas1" width="450" height="342">
+      <p>Your browser doesn't support the HTML5 canvas element.</p>
+    </canvas>
+  </div>
+
+  <div id="messageWindow">
+    <h3 class="titleBar">Messages</h3>
+    <div id="messages"></div>
+  </div>
+
+  <!-- javascript, loaded at the end to make the page appear faster -->
+  <script type="text/javascript" src="https://cs.calvin.edu/curriculum/cs/352/files/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="https://cs.calvin.edu/curriculum/cs/352/files/js/sylvester.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
