@@ -334,8 +334,7 @@ trackball.mouseMove = function(e) {
     let initial = $V([trackball.firstX, trackball.firstY, trackball.firstZ]);
     let final = $V([currentX, currentY, currentZ]);
 
-    // I know that it is normally initial.cross(final), but this feels more natural to me.
-    let axis = final.cross(initial);
+    let axis = initial.cross(final);
     let angle = initial.angleFrom(final);
 
     // If I don't do these checks, the object disappears.
